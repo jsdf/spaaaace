@@ -14,6 +14,13 @@ function vector.add_scalar(v, s)
   }
 end
 
+function vector.multiply(v1, v2)
+  return {
+    x = v1.x * v2.x,
+    y = v1.y * v2.y,
+  }
+end
+
 function vector.multiply_scalar(v, s)
   return {
     x = v.x * s,
@@ -43,6 +50,10 @@ function vector.subtract(v1, v2)
     x = v1.x - v2.x,
     y = v1.y - v2.y,
   }
+end
+
+function vector.equal(v1, v2)
+  return v1.x == v2.x and v1.y == v2.y
 end
 
 return vector

@@ -1,0 +1,24 @@
+{
+  "name": "spaaaace-thing",
+  "version": "0.0.0",
+  "description": "could be a shmup?",
+  "main": "index.js",
+  "scripts": {
+    "start": "/Applications/love.app/Contents/MacOS/love $PWD",
+    "dev": "supervisor --watch 'nothing' --exec /Applications/love.app/Contents/MacOS/love $PWD",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsdf/spaaaace-thing.git"
+  },
+  "author": "James Friend <james@jsdf.co> (http://jsdf.co/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdf/spaaaace-thing/issues"
+  },
+  "homepage": "https://github.com/jsdf/spaaaace-thing",
+  "devDependencies": {
+    "supervisor": "^0.6.0"
+  }
+}
