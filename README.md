@@ -1,4 +1,4 @@
-# spaaaace thing
+# spaaaace
 
 a love2d shmup, written in a simple code style for accessibility to beginners
 
