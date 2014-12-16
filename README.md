@@ -1,6 +1,6 @@
 # spaaaace thing
 
-a love2d shmup, written in a simple style for accessiblity
+a love2d shmup, written in a simple code style for accessibility to beginners
 
 ![spaaace](http://i.imgur.com/DwKHVdh.jpg)
 
