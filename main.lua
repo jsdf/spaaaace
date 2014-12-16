@@ -68,7 +68,7 @@ offscreen_space = 200 -- distance objects can go out of bounds before being dest
 
 -- graphics
 
-font_name = 'slkscr.ttf'
+font_filepath = 'fonts/slkscr.ttf'
 
 object_types_image_files = {
   player = 'ship5.png',
@@ -247,7 +247,7 @@ end
 function init_graphics()
   -- load images
   for object_type, filename in pairs(object_types_image_files) do
-    local object_image = love.graphics.newImage(filename)
+    local object_image = love.graphics.newImage('images/'..filename)
     object_types_images[object_type] = object_image
     -- use image dimensions for object dimensions
     object_types_dimensions[object_type] = {
@@ -256,7 +256,7 @@ function init_graphics()
     }
   end
 
-  love.graphics.setNewFont('slkscr.ttf', 36)
+  love.graphics.setNewFont(font_filepath, 36)
 
   -- create starfield (from https://love2d.org/wiki/love.graphics.point)
   for i = 1, max_stars do -- generate the coords of our stars
@@ -447,13 +447,13 @@ function draw_object(object)
 end
 
 function draw_title(text)
-  love.graphics.setNewFont(font_name, 36)
+  love.graphics.setNewFont(font_filepath, 36)
   local screen_width, screen_height = love.graphics.getDimensions()
   love.graphics.printf(text, 0, screen_height/2, screen_width, 'center')
 end
 
 function draw_score()
-  love.graphics.setNewFont(font_name, 24)
+  love.graphics.setNewFont(font_filepath, 24)
   local screen_width, screen_height = love.graphics.getDimensions()
   love.graphics.printf(game.score, 0, 0, screen_width, 'right')
 end
