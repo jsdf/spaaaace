@@ -1,6 +1,6 @@
 
 -- import our vector math functions module
-vector = require "vector"
+local vector = require "vector"
 
 
 -- IMMUTABLE GLOBALS
@@ -306,7 +306,6 @@ function update_player(dt)
   local player_movement = {x = 0, y = 0}
   for key, direction in pairs(keys_directions) do
     if love.keyboard.isDown(key) then
-      local direction = keys_directions[key]
       local movement_vector = directions_vectors[direction]
       player_movement = vector.add(player_movement, movement_vector)
     end
@@ -345,7 +344,7 @@ function update_detect_collisions()
     for j, other_object in pairs(world_objects) do
       if object ~= other_object then
         if collision(object, other_object) then
-          -- print(format_object_pos(object)..' collided with '..format_object_pos(other_object))
+          print(format_object_pos(object)..' collided with '..format_object_pos(other_object))
           if object.category == 'player' and other_object.category == 'enemy' then
             game_destroy_player()
           elseif object.category == 'projectile' then

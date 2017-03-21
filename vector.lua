@@ -28,7 +28,7 @@ function vector.multiply_scalar(v, s)
   }
 end
 
--- when you want to keep the dfirection of a vector, but discard the magnitude
+-- when you want to keep the direction of a vector, but discard the magnitude
 -- you want the 'unit vector' aka 'normalised vector'
 function vector.normalise(v)
   if v.x == 0 and v.y == 0 then
